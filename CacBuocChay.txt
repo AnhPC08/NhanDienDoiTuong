@@ -1,0 +1,35 @@
+B1: Mở Terminal và Đi đến thư mục dự án
+    cd Desktop/yolo_webapp
+Bước 2: Kích hoạt Môi trường ảo (Rất quan trọng!)
+	# Lệnh cho Windows
+	venv\Scripts\activate
+Bước 3: Chạy ứng dụng Streamlit
+	streamlit run app.py
+
+Deloy:
+
+Cách 1: Tạo đường hầm (Tunnel) để chia sẻ ra Internet (Tốt nhất để khoe nhanh)
+Bước 1: Giữ ứng dụng Streamlit đang chạy
+Bước 2: Mở một Terminal mới và cài đặt ngrok:pip install pyngrok
+Bước 3: Chạy ngrok để tạo link công cộng: ngrok http 8502
+
+Cách 2: Triển khai lên Streamlit Community Cloud (Chuyên nghiệp và miễn phí)
+1.Tạo file requirements.txt:pip freeze > requirements.txt
+2. Đưa dự án lên GitHub:
+Tạo một tài khoản GitHub (nếu chưa có).
+
+Tạo một repository mới.
+
+Tải toàn bộ thư mục dự án của bạn lên repository đó. Lưu ý: file best.pt (14MB) có thể 
+tải lên được, nhưng nếu file mô hình lớn hơn 25MB, bạn sẽ cần dùng Git LFS.
+
+3.Triển khai trên Streamlit Cloud:
+Truy cập share.streamlit.io và đăng nhập bằng tài khoản GitHub của bạn.
+
+Nhấn "New app" và chọn repository GitHub của bạn.
+
+Streamlit sẽ tự động tìm file app.py và requirements.txt.
+
+Nhấn "Deploy!" và chờ vài phút.
+
+Sau khi hoàn tất, bạn sẽ có một đường link công cộng (ví dụ: your-app-name.streamlit.app) hoạt động 24/7 mà bạn có thể chia sẻ với mọi người.
