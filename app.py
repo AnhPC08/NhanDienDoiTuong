@@ -22,10 +22,9 @@ def load_model(model_path):
 
 # --- model = torch.hub.load("ultralytics/yolov5", "yolov5s", force_reload=True) ---
  
-model = torch.hub.load('./yolov5', 'custom', path=model_path, source='local')
-	return model
+    model = torch.hub.load('./yolov5', 'custom', path=model_path, source='local')
+    return model
     
-
 # --- Giao diện chính ---
 st.title("🚀 Ứng dụng nhận dạng đối tượng với YOLOv5")
 st.write("Tải lên một hình ảnh và mô hình sẽ phát hiện các đối tượng trong đó.")
