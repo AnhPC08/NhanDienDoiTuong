@@ -18,8 +18,11 @@ def load_model(model_path):
     """
     Tải mô hình YOLOv5 từ file trọng số.
     """
-# --- doc: https://docs.ultralytics.com/yolov5/tutorials/pytorch_hub_model_loading/#before-you-start model = torch.hub.load("ultralytics/yolov5", "yolov5s", force_reload=True)
-    return model---  
+# ---doc:https://docs.ultralytics.com/yolov5/tutorials/pytorch_hub_model_loading/before-you-start---  
+
+# --- model = torch.hub.load("ultralytics/yolov5", "yolov5s", force_reload=True)
+    return model ---
+ 
 
 	model = torch.hub.load('./yolov5', 'custom', path=model_path, source='local')
     	return model
